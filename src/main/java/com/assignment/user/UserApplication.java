@@ -13,20 +13,6 @@ import java.util.stream.Stream;
 
 @SpringBootApplication
 public class UserApplication {
-    @Autowired
-    private UserRepository userRepository;
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-
-
-    //seed default users
-//	@PostConstruct
-//	public void initUser(){
-//		List<User> users = Stream.of(
-//				new User("user1",bCryptPasswordEncoder.encode("pwd1"),"user1","user1@gmail.com","0123456489")
-//		).collect(Collectors.toList());
-//		userRepository.saveAll(users);
-//	}
 
     public static void main(String[] args) {
         SpringApplication.run(UserApplication.class, args);

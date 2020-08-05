@@ -2,6 +2,7 @@ package com.assignment.user.json;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 public class UserRegistrationDTO {
     private String name;
@@ -12,7 +13,7 @@ public class UserRegistrationDTO {
     @NotBlank(message = "password is mandatory")
     private String password;
 
-    @NotBlank(message = "Email is mandatory")
+    @NotEmpty(message = "Email should not be empty")
     @Email(message = "Email should be valid")
     private String email;
 
